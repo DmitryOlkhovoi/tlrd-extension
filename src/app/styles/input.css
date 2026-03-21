@@ -1,0 +1,13 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+
+@import './layout.css';
+@import './settings.css';
+@import './tldr.css';
+@import './chat.css';
+@import './message.css';
+@import './loader.css';
+@import './scrollbar.css';
+@import './language-selector.css';
+
+@import 'tailwindcss/utilities';

@@ -1,0 +1,31 @@
+@layer components {
+  .loader {
+    @apply flex items-center justify-center py-8 gap-2;
+  }
+
+  .loader__dot {
+    @apply w-2 h-2 rounded-full bg-primary-400;
+    animation: loader-bounce 1.4s ease-in-out infinite both;
+  }
+
+  .loader__dot:nth-child(1) {
+    animation-delay: -0.32s;
+  }
+
+  .loader__dot:nth-child(2) {
+    animation-delay: -0.16s;
+  }
+
+  .loader__dot:nth-child(3) {
+    animation-delay: 0s;
+  }
+}
+
+@keyframes loader-bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}

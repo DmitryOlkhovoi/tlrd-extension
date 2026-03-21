@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  width: 300px;
+  background: #f8f9fa;
+}
+
+.popup__header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 16px;
+  background: #fff;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.popup__logo-icon {
+  width: 22px;
+  height: 22px;
+  color: #5c7cfa;
+}
+
+.popup__title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #4263eb;
+  letter-spacing: -0.02em;
+  flex: 1;
+}
+
+.popup__settings-toggle {
+  background: none;
+  border: none;
+  padding: 4px;
+  border-radius: 6px;
+  color: #868e96;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.popup__settings-toggle:hover {
+  color: #495057;
+}
+
+.popup__body {
+  padding: 16px;
+}
+
+.popup__section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.popup__desc {
+  font-size: 13px;
+  color: #868e96;
+}
+
+.popup__label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #495057;
+}
+
+.popup__input-wrap {
+  display: flex;
+  gap: 8px;
+}
+
+.popup__input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  font-size: 13px;
+  font-family: inherit;
+  background: #f8f9fa;
+  color: #212529;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.popup__input:focus {
+  border-color: #748ffc;
+}
+
+.popup__save-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 10px;
+  background: #4c6ef5;
+  color: #fff;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.popup__save-btn:hover {
+  background: #4263eb;
+}
+
+.popup__link {
+  font-size: 12px;
+  color: #4c6ef5;
+  text-decoration: none;
+}
+
+.popup__link:hover {
+  text-decoration: underline;
+}
+
+
+.popup__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 12px;
+  background: #4c6ef5;
+  color: #fff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.popup__btn:hover {
+  background: #4263eb;
+}
+
+.popup__btn:active {
+  background: #3b5bdb;
+}
+
+.popup__btn:disabled {
+  background: #ced4da;
+  color: #868e96;
+  cursor: not-allowed;
+}
+
+.popup__status {
+  font-size: 12px;
+  color: #868e96;
+  text-align: center;
+  min-height: 16px;
+}
+
+.popup__status--error {
+  color: #e03131;
+}
+
+.popup__status--saved {
+  color: #2f9e44;
+}

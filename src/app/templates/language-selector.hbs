@@ -1,0 +1,16 @@
+<label class="lang-selector__field">
+  <span class="lang-selector__label">{{t "app.lang.summary"}}</span>
+  <select class="lang-selector__select" data-action="change-summary-lang">
+    {{#each summaryLanguages}}
+      <option value="{{this.code}}" {{#if this.selected}}selected{{/if}}>{{this.nativeLabel}}</option>
+    {{/each}}
+  </select>
+</label>
+<label class="lang-selector__field">
+  <span class="lang-selector__label">{{t "app.lang.ui"}}</span>
+  <select class="lang-selector__select" data-action="change-ui-lang">
+    {{#each uiLanguages}}
+      <option value="{{this.code}}" {{#if this.selected}}selected{{/if}}>{{this.nativeLabel}}</option>
+    {{/each}}
+  </select>
+</label>

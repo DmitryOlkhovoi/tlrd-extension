@@ -1,0 +1,49 @@
+@layer components {
+  .tldr {
+    @apply bg-white rounded-2xl border border-surface-200 shadow-sm overflow-hidden;
+  }
+
+  .tldr__header {
+    @apply px-6 py-4 border-b border-surface-100 flex items-center justify-between;
+  }
+
+  .tldr__title {
+    @apply text-sm font-semibold text-surface-700 uppercase tracking-wider;
+  }
+
+  .tldr__meta {
+    @apply flex items-center gap-3;
+  }
+
+  .tldr__page-title {
+    @apply text-xs text-surface-400 truncate max-w-xs;
+  }
+
+  .tldr__original-link {
+    @apply text-xs text-primary-500 hover:text-primary-700 underline whitespace-nowrap;
+  }
+
+  .tldr__body {
+    @apply px-6 py-5;
+  }
+
+  .tldr__content {
+    @apply text-sm leading-relaxed text-surface-700 whitespace-pre-wrap;
+  }
+
+  .tldr__empty {
+    @apply text-center py-12;
+  }
+
+  .tldr__empty-icon {
+    @apply text-4xl mb-3;
+  }
+
+  .tldr__empty-text {
+    @apply text-sm text-surface-400;
+  }
+
+  .tldr__error {
+    @apply text-sm text-red-500 bg-red-50 rounded-xl px-4 py-3;
+  }
+}

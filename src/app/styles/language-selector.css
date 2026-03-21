@@ -1,0 +1,18 @@
+@layer components {
+  .lang-selector {
+    @apply flex items-center gap-3;
+  }
+
+  .lang-selector__field {
+    @apply flex flex-col gap-1;
+  }
+
+  .lang-selector__label {
+    @apply text-[10px] font-medium text-surface-400 uppercase tracking-wider;
+  }
+
+  .lang-selector__select {
+    @apply px-2 py-1 text-xs border border-surface-300 rounded-lg bg-white text-surface-700
+           focus:outline-none focus:ring-1 focus:ring-primary-200 focus:border-primary-400 cursor-pointer;
+  }
+}

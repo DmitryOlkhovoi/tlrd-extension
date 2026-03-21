@@ -1,0 +1,22 @@
+<div class="chat__header">
+  <span class="chat__title">{{t "app.chat.title"}}</span>
+</div>
+<div class="chat__messages custom-scrollbar" data-region="messages">
+  {{#unless hasMessages}}
+    <div class="chat__empty">{{t "app.chat.empty"}}</div>
+  {{/unless}}
+</div>
+<div class="chat__input-wrap">
+  <textarea
+    class="chat__input"
+    placeholder="{{t "app.chat.placeholder"}}"
+    rows="1"
+    data-input="question"
+    {{#if disabled}}disabled{{/if}}
+  ></textarea>
+  <button class="chat__send-btn" data-action="send" {{#if disabled}}disabled{{/if}}>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:18px;height:18px;">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
+    </svg>
+  </button>
+</div>

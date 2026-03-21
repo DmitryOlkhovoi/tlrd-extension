@@ -1,0 +1,37 @@
+@layer components {
+  .message {
+    @apply flex flex-col gap-1;
+  }
+
+  .message--user {
+    @apply items-end;
+  }
+
+  .message--assistant {
+    @apply items-start;
+  }
+
+  .message__role {
+    @apply text-xs font-medium uppercase tracking-wider;
+  }
+
+  .message--user .message__role {
+    @apply text-primary-500;
+  }
+
+  .message--assistant .message__role {
+    @apply text-surface-400;
+  }
+
+  .message__bubble {
+    @apply text-sm leading-relaxed max-w-[85%] rounded-2xl px-4 py-3 whitespace-pre-wrap;
+  }
+
+  .message--user .message__bubble {
+    @apply bg-primary-600 text-white rounded-br-md;
+  }
+
+  .message--assistant .message__bubble {
+    @apply bg-surface-100 text-surface-800 rounded-bl-md;
+  }
+}

@@ -1,0 +1,29 @@
+<div class="tldr__header">
+  <span class="tldr__title">{{t "app.tldr.title"}}</span>
+  <div class="tldr__meta">
+    {{#if pageTitle}}
+      <span class="tldr__page-title" title="{{pageTitle}}">{{pageTitle}}</span>
+    {{/if}}
+    {{#if pageUrl}}
+      <a class="tldr__original-link" href="{{pageUrl}}" target="_blank" rel="noopener">{{t "app.tldr.original"}}</a>
+    {{/if}}
+  </div>
+</div>
+<div class="tldr__body">
+  {{#if loading}}
+    <div class="loader">
+      <div class="loader__dot"></div>
+      <div class="loader__dot"></div>
+      <div class="loader__dot"></div>
+    </div>
+  {{else if error}}
+    <div class="tldr__error">{{error}}</div>
+  {{else if tldr}}
+    <div class="tldr__content">{{tldr}}</div>
+  {{else}}
+    <div class="tldr__empty">
+      <div class="tldr__empty-icon">&#128196;</div>
+      <div class="tldr__empty-text">{{t "app.tldr.empty"}}</div>
+    </div>
+  {{/if}}
+</div>

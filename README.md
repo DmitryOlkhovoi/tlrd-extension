@@ -12,6 +12,9 @@ A Chrome extension that generates concise TLDR summaries of any web page using O
 - **Streaming** - Responses appear in real-time as they're generated
 - **Auto-summarize** - Opens a dedicated tab and starts summarizing immediately
 
+<img width="1724" height="984" alt="Screenshot 2026-03-21 at 22 25 19" src="https://github.com/user-attachments/assets/4ba9c577-ccb8-4d52-a662-92cb3ccdfca4" />
+
+
 ## Architecture
 
 Built with [OstovJS](https://ostovjs.org/) (Backbone-like MVC framework), Handlebars templates (precompiled at build time), and Tailwind CSS with BEM methodology.

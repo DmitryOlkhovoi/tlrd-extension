@@ -18,21 +18,25 @@ A Chrome extension that generates concise TLDR summaries of any web page using O
 
 ## Architecture
 
-
+Built with [OstovJS](https://ostovjs.org/) (Backbone-like MVC framework), Handlebars templates (precompiled at build time), and Tailwind CSS with BEM methodology. Localization via [Chrome i18n API](https://developer.chrome.com/docs/extensions/reference/api/i18n).
 
 ```
+_locales/                   # Chrome i18n (messages.json per locale)
+  en/ zh/ es/ hi/ ar/
+  fr/ pt/ ru/ ja/ de/
 src/
-  app/                    # Main application (opens in new tab)
-    models/               # OstovJS Models (Settings, Page, Message, Collection)
-    views/                # OstovJS Views (App, Settings, TLDR, Chat, Message, LanguageSelector)
-    templates/            # Handlebars templates (.hbs)
-    styles/               # Tailwind CSS + BEM (@apply approach)
-    services/             # OpenAI API service with streaming
-  popup/                  # Extension popup (API key + summarize button)
-  background/             # Service worker
-  content/                # Content script (page text extraction)
+  app/                      # Main application (opens in new tab)
+    models/                 # OstovJS Models (Settings, Page, Message, Collection)
+    views/                  # OstovJS Views (App, Settings, TLDR, Chat, Message, LanguageSelector)
+    templates/              # Handlebars templates (.hbs)
+    styles/                 # Tailwind CSS + BEM (@apply approach)
+    services/               # OpenAI API service with streaming
+  popup/                    # Extension popup (API key + summarize button)
+  background/               # Service worker
+  content/                  # Content script (page text extraction)
   shared/
-    i18n/                 # Internationalization (10 languages)
+    i18n/                   # i18n runtime (chrome.i18n.getMessage + fallback for locale override)
+      translations/         # TS fallback translations for runtime locale switching
 ```
 
 ## Setup
@@ -68,6 +72,7 @@ npm run typecheck
 - **Language** - TypeScript
 - **Bundler** - Vite
 - **API** - OpenAI Chat Completions (streaming)
+- **i18n** - Chrome i18n API (`_locales/`) + runtime fallback for dynamic locale switching
 - **Platform** - Chrome Extension Manifest V3
 
 ## License

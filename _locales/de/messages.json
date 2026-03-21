@@ -1,0 +1,104 @@
+{
+  "appName": {
+    "message": "TLDR - Seitenzusammenfasser"
+  },
+  "appDescription": {
+    "message": "Erhalten Sie eine TLDR-Zusammenfassung jeder Seite mit OpenAI. Stellen Sie Folgefragen in einem eigenen Tab."
+  },
+  "popup_desc": {
+    "message": "Seite mit KI zusammenfassen"
+  },
+  "popup_btn_summarize": {
+    "message": "Diese Seite zusammenfassen"
+  },
+  "popup_status_extracting": {
+    "message": "Inhalt wird extrahiert..."
+  },
+  "popup_apiKey_label": {
+    "message": "OpenAI API-Schlüssel"
+  },
+  "popup_apiKey_save": {
+    "message": "Speichern"
+  },
+  "popup_apiKey_saved": {
+    "message": "Gespeichert!"
+  },
+  "popup_apiKey_required": {
+    "message": "Bitte API-Schlüssel eingeben"
+  },
+  "popup_apiKey_link": {
+    "message": "API-Schlüssel erhalten"
+  },
+  "popup_summaryLang": {
+    "message": "Zusammenfassungssprache"
+  },
+  "popup_uiLang": {
+    "message": "Oberflächensprache"
+  },
+  "popup_settings": {
+    "message": "Einstellungen"
+  },
+  "app_btn_summarize": {
+    "message": "Zusammenfassen"
+  },
+  "app_settings_title": {
+    "message": "API-Einstellungen"
+  },
+  "app_settings_label": {
+    "message": "OpenAI API-Schlüssel"
+  },
+  "app_settings_link": {
+    "message": "API-Schlüssel erhalten"
+  },
+  "app_settings_saved": {
+    "message": "Einstellungen gespeichert"
+  },
+  "app_settings_required": {
+    "message": "Bitte API-Schlüssel eingeben"
+  },
+  "app_settings_save": {
+    "message": "Speichern"
+  },
+  "app_settings_model": {
+    "message": "Modell"
+  },
+  "app_tldr_title": {
+    "message": "TLDR"
+  },
+  "app_tldr_empty": {
+    "message": "Klicken Sie auf \"Zusammenfassen\""
+  },
+  "app_tldr_original": {
+    "message": "Original ansehen"
+  },
+  "app_chat_title": {
+    "message": "Folgefragen"
+  },
+  "app_chat_empty": {
+    "message": "Stellen Sie eine Frage zum Inhalt"
+  },
+  "app_chat_placeholder": {
+    "message": "Folgefrage stellen..."
+  },
+  "app_chat_role_user": {
+    "message": "Du"
+  },
+  "app_chat_role_assistant": {
+    "message": "KI"
+  },
+  "app_lang_summary": {
+    "message": "Zusammenfassungssprache"
+  },
+  "app_lang_ui": {
+    "message": "Oberflächensprache"
+  },
+  "error_noTab": {
+    "message": "Kein aktiver Tab gefunden"
+  },
+  "error_noContent": {
+    "message": "Inhalt konnte nicht extrahiert werden"
+  },
+  "error_noPageContent": {
+    "message": "Kein Inhalt. Öffnen Sie über die Erweiterung."
+  }
+}

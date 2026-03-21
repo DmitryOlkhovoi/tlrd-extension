@@ -1,0 +1,104 @@
+{
+  "appName": {
+    "message": "TLDR - पृष्ठ सारांशकर्ता"
+  },
+  "appDescription": {
+    "message": "OpenAI का उपयोग करके किसी भी पृष्ठ का TLDR सारांश प्राप्त करें। एक समर्पित टैब में अनुवर्ती प्रश्न पूछें।"
+  },
+  "popup_desc": {
+    "message": "AI से वर्तमान पृष्ठ का सारांश बनाएं"
+  },
+  "popup_btn_summarize": {
+    "message": "इस पृष्ठ का सारांश"
+  },
+  "popup_status_extracting": {
+    "message": "सामग्री निकाली जा रही है..."
+  },
+  "popup_apiKey_label": {
+    "message": "OpenAI API कुंजी"
+  },
+  "popup_apiKey_save": {
+    "message": "सहेजें"
+  },
+  "popup_apiKey_saved": {
+    "message": "सहेजा गया!"
+  },
+  "popup_apiKey_required": {
+    "message": "कृपया API कुंजी दर्ज करें"
+  },
+  "popup_apiKey_link": {
+    "message": "API कुंजी प्राप्त करें"
+  },
+  "popup_summaryLang": {
+    "message": "सारांश भाषा"
+  },
+  "popup_uiLang": {
+    "message": "इंटरफ़ेस भाषा"
+  },
+  "popup_settings": {
+    "message": "सेटिंग्स"
+  },
+  "app_btn_summarize": {
+    "message": "सारांश"
+  },
+  "app_settings_title": {
+    "message": "API सेटिंग्स"
+  },
+  "app_settings_label": {
+    "message": "OpenAI API कुंजी"
+  },
+  "app_settings_link": {
+    "message": "API कुंजी प्राप्त करें"
+  },
+  "app_settings_saved": {
+    "message": "सेटिंग्स सहेजी गईं"
+  },
+  "app_settings_required": {
+    "message": "कृपया API कुंजी दर्ज करें"
+  },
+  "app_settings_save": {
+    "message": "सहेजें"
+  },
+  "app_settings_model": {
+    "message": "मॉडल"
+  },
+  "app_tldr_title": {
+    "message": "सारांश"
+  },
+  "app_tldr_empty": {
+    "message": "सारांश प्राप्त करने के लिए \"सारांश\" पर क्लिक करें"
+  },
+  "app_tldr_original": {
+    "message": "मूल देखें"
+  },
+  "app_chat_title": {
+    "message": "अनुवर्ती प्रश्न"
+  },
+  "app_chat_empty": {
+    "message": "सामग्री के बारे में प्रश्न पूछें"
+  },
+  "app_chat_placeholder": {
+    "message": "अनुवर्ती प्रश्न पूछें..."
+  },
+  "app_chat_role_user": {
+    "message": "आप"
+  },
+  "app_chat_role_assistant": {
+    "message": "AI"
+  },
+  "app_lang_summary": {
+    "message": "सारांश भाषा"
+  },
+  "app_lang_ui": {
+    "message": "इंटरफ़ेस भाषा"
+  },
+  "error_noTab": {
+    "message": "कोई सक्रिय टैब नहीं मिला"
+  },
+  "error_noContent": {
+    "message": "सामग्री नहीं निकाली जा सकी"
+  },
+  "error_noPageContent": {
+    "message": "कोई सामग्री उपलब्ध नहीं। एक्सटेंशन से खोलें।"
+  }
+}

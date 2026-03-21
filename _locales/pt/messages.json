@@ -1,0 +1,104 @@
+{
+  "appName": {
+    "message": "TLDR - Resumidor de Paginas"
+  },
+  "appDescription": {
+    "message": "Obtenha um resumo TLDR de qualquer pagina usando OpenAI. Faca perguntas adicionais em uma aba dedicada."
+  },
+  "popup_desc": {
+    "message": "Resumir a página atual com IA"
+  },
+  "popup_btn_summarize": {
+    "message": "Resumir esta página"
+  },
+  "popup_status_extracting": {
+    "message": "Extraindo conteúdo..."
+  },
+  "popup_apiKey_label": {
+    "message": "Chave API OpenAI"
+  },
+  "popup_apiKey_save": {
+    "message": "Salvar"
+  },
+  "popup_apiKey_saved": {
+    "message": "Salvo!"
+  },
+  "popup_apiKey_required": {
+    "message": "Insira uma chave API"
+  },
+  "popup_apiKey_link": {
+    "message": "Obter chave API"
+  },
+  "popup_summaryLang": {
+    "message": "Idioma do resumo"
+  },
+  "popup_uiLang": {
+    "message": "Idioma da interface"
+  },
+  "popup_settings": {
+    "message": "Configurações"
+  },
+  "app_btn_summarize": {
+    "message": "Resumir"
+  },
+  "app_settings_title": {
+    "message": "Configurações da API"
+  },
+  "app_settings_label": {
+    "message": "Chave API OpenAI"
+  },
+  "app_settings_link": {
+    "message": "Obter chave API"
+  },
+  "app_settings_saved": {
+    "message": "Configurações salvas"
+  },
+  "app_settings_required": {
+    "message": "Insira uma chave API"
+  },
+  "app_settings_save": {
+    "message": "Salvar"
+  },
+  "app_settings_model": {
+    "message": "Modelo"
+  },
+  "app_tldr_title": {
+    "message": "TLDR"
+  },
+  "app_tldr_empty": {
+    "message": "Clique em \"Resumir\" para obter um resumo"
+  },
+  "app_tldr_original": {
+    "message": "Ver original"
+  },
+  "app_chat_title": {
+    "message": "Perguntas adicionais"
+  },
+  "app_chat_empty": {
+    "message": "Faça uma pergunta sobre o conteúdo"
+  },
+  "app_chat_placeholder": {
+    "message": "Faça uma pergunta..."
+  },
+  "app_chat_role_user": {
+    "message": "Você"
+  },
+  "app_chat_role_assistant": {
+    "message": "IA"
+  },
+  "app_lang_summary": {
+    "message": "Idioma do resumo"
+  },
+  "app_lang_ui": {
+    "message": "Idioma da interface"
+  },
+  "error_noTab": {
+    "message": "Nenhuma aba ativa encontrada"
+  },
+  "error_noContent": {
+    "message": "Não foi possível extrair o conteúdo"
+  },
+  "error_noPageContent": {
+    "message": "Sem conteúdo. Abra pela extensão."
+  }
+}

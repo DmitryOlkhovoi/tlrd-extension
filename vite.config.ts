@@ -1,6 +1,6 @@
 import { defineConfig, type Plugin } from 'vite';
 import { resolve } from 'path';
-import { copyFileSync, mkdirSync, readdirSync } from 'fs';
+import { copyFileSync, mkdirSync, readdirSync, existsSync } from 'fs';
 import Handlebars from 'handlebars';
 
 function handlebarsPrecompile(): Plugin {
@@ -33,6 +33,18 @@ function copyExtensionFiles(): Plugin {
       for (const file of readdirSync('icons')) {
         if (file.endsWith('.png')) {
           copyFileSync(`icons/${file}`, `dist/icons/${file}`);
+        }
+      }
+
+      // Copy _locales
+      if (existsSync('_locales')) {
+        for (const locale of readdirSync('_locales')) {
+          const srcDir = `_locales/${locale}`;
+          const destDir = `dist/_locales/${locale}`;
+          mkdirSync(destDir, { recursive: true });
+          for (const file of readdirSync(srcDir)) {
+            copyFileSync(`${srcDir}/${file}`, `${destDir}/${file}`);
+          }
         }
       }
     },

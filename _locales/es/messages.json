@@ -1,0 +1,104 @@
+{
+  "appName": {
+    "message": "TLDR - Resumidor de paginas"
+  },
+  "appDescription": {
+    "message": "Obtiene un resumen TLDR de cualquier pagina usando OpenAI. Haz preguntas de seguimiento en una pestana dedicada."
+  },
+  "popup_desc": {
+    "message": "Resumir la página actual con IA"
+  },
+  "popup_btn_summarize": {
+    "message": "Resumir esta página"
+  },
+  "popup_status_extracting": {
+    "message": "Extrayendo contenido..."
+  },
+  "popup_apiKey_label": {
+    "message": "Clave API de OpenAI"
+  },
+  "popup_apiKey_save": {
+    "message": "Guardar"
+  },
+  "popup_apiKey_saved": {
+    "message": "¡Guardado!"
+  },
+  "popup_apiKey_required": {
+    "message": "Introduce una clave API"
+  },
+  "popup_apiKey_link": {
+    "message": "Obtener clave API"
+  },
+  "popup_summaryLang": {
+    "message": "Idioma del resumen"
+  },
+  "popup_uiLang": {
+    "message": "Idioma de la interfaz"
+  },
+  "popup_settings": {
+    "message": "Ajustes"
+  },
+  "app_btn_summarize": {
+    "message": "Resumir"
+  },
+  "app_settings_title": {
+    "message": "Configuración API"
+  },
+  "app_settings_label": {
+    "message": "Clave API de OpenAI"
+  },
+  "app_settings_link": {
+    "message": "Obtener clave API"
+  },
+  "app_settings_saved": {
+    "message": "Ajustes guardados"
+  },
+  "app_settings_required": {
+    "message": "Introduce una clave API"
+  },
+  "app_settings_save": {
+    "message": "Guardar"
+  },
+  "app_settings_model": {
+    "message": "Modelo"
+  },
+  "app_tldr_title": {
+    "message": "TLDR"
+  },
+  "app_tldr_empty": {
+    "message": "Haz clic en \"Resumir\" para obtener un resumen"
+  },
+  "app_tldr_original": {
+    "message": "Ver original"
+  },
+  "app_chat_title": {
+    "message": "Preguntas de seguimiento"
+  },
+  "app_chat_empty": {
+    "message": "Haz una pregunta sobre el contenido"
+  },
+  "app_chat_placeholder": {
+    "message": "Haz una pregunta..."
+  },
+  "app_chat_role_user": {
+    "message": "Tú"
+  },
+  "app_chat_role_assistant": {
+    "message": "IA"
+  },
+  "app_lang_summary": {
+    "message": "Idioma del resumen"
+  },
+  "app_lang_ui": {
+    "message": "Idioma de la interfaz"
+  },
+  "error_noTab": {
+    "message": "No se encontró pestaña activa"
+  },
+  "error_noContent": {
+    "message": "No se pudo extraer el contenido"
+  },
+  "error_noPageContent": {
+    "message": "Sin contenido. Abre desde la extensión."
+  }
+}

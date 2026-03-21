@@ -1,0 +1,104 @@
+{
+  "appName": {
+    "message": "TLDR - Page Summarizer"
+  },
+  "appDescription": {
+    "message": "Get a TLDR summary of any page using OpenAI. Ask follow-up questions in a dedicated tab."
+  },
+  "popup_desc": {
+    "message": "Summarize the current page with AI"
+  },
+  "popup_btn_summarize": {
+    "message": "Summarize this page"
+  },
+  "popup_status_extracting": {
+    "message": "Extracting page content..."
+  },
+  "popup_apiKey_label": {
+    "message": "OpenAI API Key"
+  },
+  "popup_apiKey_save": {
+    "message": "Save"
+  },
+  "popup_apiKey_saved": {
+    "message": "Saved!"
+  },
+  "popup_apiKey_required": {
+    "message": "Please enter an API key"
+  },
+  "popup_apiKey_link": {
+    "message": "Get your API key"
+  },
+  "popup_summaryLang": {
+    "message": "Summary language"
+  },
+  "popup_uiLang": {
+    "message": "Interface language"
+  },
+  "popup_settings": {
+    "message": "Settings"
+  },
+  "app_btn_summarize": {
+    "message": "Summarize"
+  },
+  "app_settings_title": {
+    "message": "API Settings"
+  },
+  "app_settings_label": {
+    "message": "OpenAI API Key"
+  },
+  "app_settings_link": {
+    "message": "Get your API key"
+  },
+  "app_settings_saved": {
+    "message": "Settings saved"
+  },
+  "app_settings_required": {
+    "message": "Please enter an API key"
+  },
+  "app_settings_save": {
+    "message": "Save"
+  },
+  "app_settings_model": {
+    "message": "Model"
+  },
+  "app_tldr_title": {
+    "message": "TLDR"
+  },
+  "app_tldr_empty": {
+    "message": "Click \"Summarize\" to get a TLDR of the page"
+  },
+  "app_tldr_original": {
+    "message": "View original"
+  },
+  "app_chat_title": {
+    "message": "Follow-up Questions"
+  },
+  "app_chat_empty": {
+    "message": "Ask a question about the page content"
+  },
+  "app_chat_placeholder": {
+    "message": "Ask a follow-up question..."
+  },
+  "app_chat_role_user": {
+    "message": "You"
+  },
+  "app_chat_role_assistant": {
+    "message": "AI"
+  },
+  "app_lang_summary": {
+    "message": "Summary language"
+  },
+  "app_lang_ui": {
+    "message": "Interface language"
+  },
+  "error_noTab": {
+    "message": "No active tab found"
+  },
+  "error_noContent": {
+    "message": "Could not extract page content"
+  },
+  "error_noPageContent": {
+    "message": "No page content available. Open this from the extension popup."
+  }
+}

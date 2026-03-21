@@ -1,0 +1,104 @@
+{
+  "appName": {
+    "message": "TLDR - Краткое содержание страниц"
+  },
+  "appDescription": {
+    "message": "Получите TLDR-резюме любой страницы с помощью OpenAI. Задавайте дополнительные вопросы в отдельной вкладке."
+  },
+  "popup_desc": {
+    "message": "Сделать краткое содержание страницы с помощью ИИ"
+  },
+  "popup_btn_summarize": {
+    "message": "Суммаризировать страницу"
+  },
+  "popup_status_extracting": {
+    "message": "Извлечение содержимого..."
+  },
+  "popup_apiKey_label": {
+    "message": "Ключ API OpenAI"
+  },
+  "popup_apiKey_save": {
+    "message": "Сохранить"
+  },
+  "popup_apiKey_saved": {
+    "message": "Сохранено!"
+  },
+  "popup_apiKey_required": {
+    "message": "Введите ключ API"
+  },
+  "popup_apiKey_link": {
+    "message": "Получить ключ API"
+  },
+  "popup_summaryLang": {
+    "message": "Язык резюме"
+  },
+  "popup_uiLang": {
+    "message": "Язык интерфейса"
+  },
+  "popup_settings": {
+    "message": "Настройки"
+  },
+  "app_btn_summarize": {
+    "message": "Суммаризировать"
+  },
+  "app_settings_title": {
+    "message": "Настройки API"
+  },
+  "app_settings_label": {
+    "message": "Ключ API OpenAI"
+  },
+  "app_settings_link": {
+    "message": "Получить ключ API"
+  },
+  "app_settings_saved": {
+    "message": "Настройки сохранены"
+  },
+  "app_settings_required": {
+    "message": "Введите ключ API"
+  },
+  "app_settings_save": {
+    "message": "Сохранить"
+  },
+  "app_settings_model": {
+    "message": "Модель"
+  },
+  "app_tldr_title": {
+    "message": "TLDR"
+  },
+  "app_tldr_empty": {
+    "message": "Нажмите \"Суммаризировать\" для получения резюме"
+  },
+  "app_tldr_original": {
+    "message": "Открыть оригинал"
+  },
+  "app_chat_title": {
+    "message": "Дополнительные вопросы"
+  },
+  "app_chat_empty": {
+    "message": "Задайте вопрос по содержанию страницы"
+  },
+  "app_chat_placeholder": {
+    "message": "Задайте вопрос..."
+  },
+  "app_chat_role_user": {
+    "message": "Вы"
+  },
+  "app_chat_role_assistant": {
+    "message": "ИИ"
+  },
+  "app_lang_summary": {
+    "message": "Язык резюме"
+  },
+  "app_lang_ui": {
+    "message": "Язык интерфейса"
+  },
+  "error_noTab": {
+    "message": "Активная вкладка не найдена"
+  },
+  "error_noContent": {
+    "message": "Не удалось извлечь содержимое"
+  },
+  "error_noPageContent": {
+    "message": "Нет содержимого. Откройте через расширение."
+  }
+}

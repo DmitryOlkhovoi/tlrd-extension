@@ -1,0 +1,104 @@
+{
+  "appName": {
+    "message": "TLDR - ページ要約ツール"
+  },
+  "appDescription": {
+    "message": "OpenAIを使って任意のページのTLDR要約を取得。専用タブでフォローアップの質問ができます。"
+  },
+  "popup_desc": {
+    "message": "AIでページを要約"
+  },
+  "popup_btn_summarize": {
+    "message": "このページを要約"
+  },
+  "popup_status_extracting": {
+    "message": "コンテンツを抽出中..."
+  },
+  "popup_apiKey_label": {
+    "message": "OpenAI APIキー"
+  },
+  "popup_apiKey_save": {
+    "message": "保存"
+  },
+  "popup_apiKey_saved": {
+    "message": "保存しました！"
+  },
+  "popup_apiKey_required": {
+    "message": "APIキーを入力してください"
+  },
+  "popup_apiKey_link": {
+    "message": "APIキーを取得"
+  },
+  "popup_summaryLang": {
+    "message": "要約の言語"
+  },
+  "popup_uiLang": {
+    "message": "インターフェース言語"
+  },
+  "popup_settings": {
+    "message": "設定"
+  },
+  "app_btn_summarize": {
+    "message": "要約"
+  },
+  "app_settings_title": {
+    "message": "API設定"
+  },
+  "app_settings_label": {
+    "message": "OpenAI APIキー"
+  },
+  "app_settings_link": {
+    "message": "APIキーを取得"
+  },
+  "app_settings_saved": {
+    "message": "設定を保存しました"
+  },
+  "app_settings_required": {
+    "message": "APIキーを入力してください"
+  },
+  "app_settings_save": {
+    "message": "保存"
+  },
+  "app_settings_model": {
+    "message": "モデル"
+  },
+  "app_tldr_title": {
+    "message": "要約"
+  },
+  "app_tldr_empty": {
+    "message": "「要約」をクリックして要約を取得"
+  },
+  "app_tldr_original": {
+    "message": "原文を見る"
+  },
+  "app_chat_title": {
+    "message": "フォローアップ"
+  },
+  "app_chat_empty": {
+    "message": "コンテンツについて質問する"
+  },
+  "app_chat_placeholder": {
+    "message": "質問を入力..."
+  },
+  "app_chat_role_user": {
+    "message": "あなた"
+  },
+  "app_chat_role_assistant": {
+    "message": "AI"
+  },
+  "app_lang_summary": {
+    "message": "要約の言語"
+  },
+  "app_lang_ui": {
+    "message": "インターフェース言語"
+  },
+  "error_noTab": {
+    "message": "アクティブなタブが見つかりません"
+  },
+  "error_noContent": {
+    "message": "コンテンツを抽出できませんでした"
+  },
+  "error_noPageContent": {
+    "message": "コンテンツがありません。拡張機能から開いてください。"
+  }
+}

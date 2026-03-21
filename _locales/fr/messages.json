@@ -1,0 +1,104 @@
+{
+  "appName": {
+    "message": "TLDR - Résumeur de pages"
+  },
+  "appDescription": {
+    "message": "Obtenez un résumé TLDR de n'importe quelle page avec OpenAI. Posez des questions de suivi dans un onglet dédié."
+  },
+  "popup_desc": {
+    "message": "Résumer la page avec l'IA"
+  },
+  "popup_btn_summarize": {
+    "message": "Résumer cette page"
+  },
+  "popup_status_extracting": {
+    "message": "Extraction du contenu..."
+  },
+  "popup_apiKey_label": {
+    "message": "Clé API OpenAI"
+  },
+  "popup_apiKey_save": {
+    "message": "Enregistrer"
+  },
+  "popup_apiKey_saved": {
+    "message": "Enregistré !"
+  },
+  "popup_apiKey_required": {
+    "message": "Veuillez entrer une clé API"
+  },
+  "popup_apiKey_link": {
+    "message": "Obtenir une clé API"
+  },
+  "popup_summaryLang": {
+    "message": "Langue du résumé"
+  },
+  "popup_uiLang": {
+    "message": "Langue de l'interface"
+  },
+  "popup_settings": {
+    "message": "Paramètres"
+  },
+  "app_btn_summarize": {
+    "message": "Résumer"
+  },
+  "app_settings_title": {
+    "message": "Paramètres API"
+  },
+  "app_settings_label": {
+    "message": "Clé API OpenAI"
+  },
+  "app_settings_link": {
+    "message": "Obtenir une clé API"
+  },
+  "app_settings_saved": {
+    "message": "Paramètres enregistrés"
+  },
+  "app_settings_required": {
+    "message": "Veuillez entrer une clé API"
+  },
+  "app_settings_save": {
+    "message": "Enregistrer"
+  },
+  "app_settings_model": {
+    "message": "Modèle"
+  },
+  "app_tldr_title": {
+    "message": "TLDR"
+  },
+  "app_tldr_empty": {
+    "message": "Cliquez sur \"Résumer\" pour obtenir un résumé"
+  },
+  "app_tldr_original": {
+    "message": "Voir l'original"
+  },
+  "app_chat_title": {
+    "message": "Questions de suivi"
+  },
+  "app_chat_empty": {
+    "message": "Posez une question sur le contenu"
+  },
+  "app_chat_placeholder": {
+    "message": "Posez une question..."
+  },
+  "app_chat_role_user": {
+    "message": "Vous"
+  },
+  "app_chat_role_assistant": {
+    "message": "IA"
+  },
+  "app_lang_summary": {
+    "message": "Langue du résumé"
+  },
+  "app_lang_ui": {
+    "message": "Langue de l'interface"
+  },
+  "error_noTab": {
+    "message": "Aucun onglet actif trouvé"
+  },
+  "error_noContent": {
+    "message": "Impossible d'extraire le contenu"
+  },
+  "error_noPageContent": {
+    "message": "Aucun contenu. Ouvrez depuis l'extension."
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "appName": {
+    "message": "TLDR - ملخص الصفحات"
+  },
+  "appDescription": {
+    "message": "احصل على ملخص TLDR لأي صفحة باستخدام OpenAI. اطرح أسئلة متابعة في علامة تبويب مخصصة."
+  },
+  "popup_desc": {
+    "message": "تلخيص الصفحة الحالية بالذكاء الاصطناعي"
+  },
+  "popup_btn_summarize": {
+    "message": "تلخيص هذه الصفحة"
+  },
+  "popup_status_extracting": {
+    "message": "جارٍ استخراج المحتوى..."
+  },
+  "popup_apiKey_label": {
+    "message": "مفتاح OpenAI API"
+  },
+  "popup_apiKey_save": {
+    "message": "حفظ"
+  },
+  "popup_apiKey_saved": {
+    "message": "تم الحفظ!"
+  },
+  "popup_apiKey_required": {
+    "message": "الرجاء إدخال مفتاح API"
+  },
+  "popup_apiKey_link": {
+    "message": "احصل على مفتاح API"
+  },
+  "popup_summaryLang": {
+    "message": "لغة الملخص"
+  },
+  "popup_uiLang": {
+    "message": "لغة الواجهة"
+  },
+  "popup_settings": {
+    "message": "الإعدادات"
+  },
+  "app_btn_summarize": {
+    "message": "تلخيص"
+  },
+  "app_settings_title": {
+    "message": "إعدادات API"
+  },
+  "app_settings_label": {
+    "message": "مفتاح OpenAI API"
+  },
+  "app_settings_link": {
+    "message": "احصل على مفتاح API"
+  },
+  "app_settings_saved": {
+    "message": "تم حفظ الإعدادات"
+  },
+  "app_settings_required": {
+    "message": "الرجاء إدخال مفتاح API"
+  },
+  "app_settings_save": {
+    "message": "حفظ"
+  },
+  "app_settings_model": {
+    "message": "النموذج"
+  },
+  "app_tldr_title": {
+    "message": "ملخص"
+  },
+  "app_tldr_empty": {
+    "message": "انقر على \"تلخيص\" للحصول على ملخص"
+  },
+  "app_tldr_original": {
+    "message": "عرض الأصل"
+  },
+  "app_chat_title": {
+    "message": "أسئلة متابعة"
+  },
+  "app_chat_empty": {
+    "message": "اطرح سؤالاً عن المحتوى"
+  },
+  "app_chat_placeholder": {
+    "message": "اطرح سؤال متابعة..."
+  },
+  "app_chat_role_user": {
+    "message": "أنت"
+  },
+  "app_chat_role_assistant": {
+    "message": "AI"
+  },
+  "app_lang_summary": {
+    "message": "لغة الملخص"
+  },
+  "app_lang_ui": {
+    "message": "لغة الواجهة"
+  },
+  "error_noTab": {
+    "message": "لم يتم العثور على علامة تبويب نشطة"
+  },
+  "error_noContent": {
+    "message": "تعذر استخراج المحتوى"
+  },
+  "error_noPageContent": {
+    "message": "لا يوجد محتوى. افتح من الإضافة."
+  }
+}

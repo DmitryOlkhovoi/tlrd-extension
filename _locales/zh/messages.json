@@ -1,0 +1,104 @@
+{
+  "appName": {
+    "message": "TLDR - 页面摘要工具"
+  },
+  "appDescription": {
+    "message": "使用OpenAI获取任意页面的TLDR摘要。在专用标签页中提出后续问题。"
+  },
+  "popup_desc": {
+    "message": "使用AI总结当前页面"
+  },
+  "popup_btn_summarize": {
+    "message": "总结此页面"
+  },
+  "popup_status_extracting": {
+    "message": "正在提取页面内容..."
+  },
+  "popup_apiKey_label": {
+    "message": "OpenAI API密钥"
+  },
+  "popup_apiKey_save": {
+    "message": "保存"
+  },
+  "popup_apiKey_saved": {
+    "message": "已保存！"
+  },
+  "popup_apiKey_required": {
+    "message": "请输入API密钥"
+  },
+  "popup_apiKey_link": {
+    "message": "获取API密钥"
+  },
+  "popup_summaryLang": {
+    "message": "摘要语言"
+  },
+  "popup_uiLang": {
+    "message": "界面语言"
+  },
+  "popup_settings": {
+    "message": "设置"
+  },
+  "app_btn_summarize": {
+    "message": "总结"
+  },
+  "app_settings_title": {
+    "message": "API设置"
+  },
+  "app_settings_label": {
+    "message": "OpenAI API密钥"
+  },
+  "app_settings_link": {
+    "message": "获取API密钥"
+  },
+  "app_settings_saved": {
+    "message": "设置已保存"
+  },
+  "app_settings_required": {
+    "message": "请输入API密钥"
+  },
+  "app_settings_save": {
+    "message": "保存"
+  },
+  "app_settings_model": {
+    "message": "模型"
+  },
+  "app_tldr_title": {
+    "message": "摘要"
+  },
+  "app_tldr_empty": {
+    "message": "点击\"总结\"获取页面摘要"
+  },
+  "app_tldr_original": {
+    "message": "查看原文"
+  },
+  "app_chat_title": {
+    "message": "追问"
+  },
+  "app_chat_empty": {
+    "message": "对页面内容提出问题"
+  },
+  "app_chat_placeholder": {
+    "message": "提出追问..."
+  },
+  "app_chat_role_user": {
+    "message": "你"
+  },
+  "app_chat_role_assistant": {
+    "message": "AI"
+  },
+  "app_lang_summary": {
+    "message": "摘要语言"
+  },
+  "app_lang_ui": {
+    "message": "界面语言"
+  },
+  "error_noTab": {
+    "message": "未找到活动标签页"
+  },
+  "error_noContent": {
+    "message": "无法提取页面内容"
+  },
+  "error_noPageContent": {
+    "message": "没有可用的页面内容。请从扩展弹窗打开。"
+  }
+}

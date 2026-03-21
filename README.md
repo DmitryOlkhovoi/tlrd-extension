@@ -17,7 +17,8 @@ A Chrome extension that generates concise TLDR summaries of any web page using O
 
 ## Architecture
 
-Built with [OstovJS](https://ostovjs.org/) (Backbone-like MVC framework), Handlebars templates (precompiled at build time), and Tailwind CSS with BEM methodology.
+<img width="1536" height="1024" alt="ChatGPT Image Mar 21, 2026, 10_40_53 PM" src="https://github.com/user-attachments/assets/7ac7f6c1-f379-4b5d-ab6c-9e4cd9805258" />
+
 
 ```
 src/

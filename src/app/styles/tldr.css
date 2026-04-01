@@ -28,7 +28,23 @@
   }
 
   .tldr__content {
-    @apply text-sm leading-relaxed text-surface-700 whitespace-pre-wrap;
+    @apply text-sm leading-relaxed text-surface-700;
+  }
+
+  .tldr__content.prose :where(p):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    @apply my-2 first:mt-0 last:mb-0;
+  }
+
+  .tldr__content.prose :where(ul, ol):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    @apply my-2;
+  }
+
+  .tldr__content.prose :where(li):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    @apply my-1;
+  }
+
+  .tldr__content.prose :where(h1, h2, h3, h4):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    @apply my-3 font-bold text-base;
   }
 
   .tldr__empty {

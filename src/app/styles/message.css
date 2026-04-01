@@ -24,7 +24,43 @@
   }
 
   .message__bubble {
-    @apply text-sm leading-relaxed max-w-[85%] rounded-2xl px-4 py-3 whitespace-pre-wrap;
+    @apply text-sm leading-relaxed max-w-[85%] rounded-2xl px-4 py-3;
+  }
+
+  .message__bubble.prose {
+    @apply max-w-[85%];
+  }
+
+  .message__bubble.prose :where(p):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    @apply my-1 first:mt-0 last:mb-0;
+  }
+
+  .message__bubble.prose :where(ul, ol):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    @apply my-1;
+  }
+
+  .message__bubble.prose :where(li):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    @apply my-0.5;
+  }
+
+  .message__bubble.prose :where(h1, h2, h3, h4):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    @apply my-2 font-bold text-base;
+  }
+
+  .message__bubble.prose :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    @apply bg-surface-200 px-1 py-0.5 rounded text-xs;
+  }
+
+  .message--user .message__bubble.prose :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    @apply bg-primary-700 text-white;
+  }
+
+  .message__bubble.prose :where(pre):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    @apply bg-surface-800 text-surface-50 p-3 rounded-lg my-2 overflow-x-auto;
+  }
+
+  .message__bubble.prose :where(pre code):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    @apply bg-transparent p-0 text-xs;
   }
 
   .message--user .message__bubble {

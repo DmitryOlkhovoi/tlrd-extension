@@ -17,14 +17,14 @@ If the page is a single article or post: focus on the key points, main arguments
 
 If the page is a list of posts, a feed, or an index page: provide a brief overview of what the page contains, mention the main topics and notable items. Don't summarize only the first post — cover the whole page.
 
-Use plain language. ${getLanguageInstruction(language)}`;
+Use rich Markdown formatting (lists, bold text, etc.) to make the summary easy to read. ${getLanguageInstruction(language)}`;
 }
 
 function getChatSystemPrompt(language: SummaryLanguage): string {
   const langInstruction = language === 'original'
     ? 'Respond in the same language as the TLDR summary above.'
     : `Respond in ${LANGUAGE_NAMES[language]}.`;
-  return `You are a helpful assistant discussing a web page the user just read. You have access to the page content and its TLDR summary. Answer follow-up questions about the content clearly and concisely. ${langInstruction}`;
+  return `You are a helpful assistant discussing a web page the user just read. You have access to the page content and its TLDR summary. Answer follow-up questions about the content clearly and concisely. Use rich Markdown formatting (lists, bold text, code blocks) to structure your response. ${langInstruction}`;
 }
 
 interface ChatMessage {

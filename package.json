@@ -11,7 +11,9 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.19",
     "handlebars": "^4.7.8",
+    "marked": "^17.0.5",
     "ostovjs": "^1.7.8"
   },
   "devDependencies": {

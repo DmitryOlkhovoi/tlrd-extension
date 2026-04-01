@@ -4,6 +4,9 @@ A Chrome extension that generates concise TLDR summaries of any web page using O
 
 <img width="1536" height="1024" alt="ChatGPT Image Mar 21, 2026, 10_40_53 PM" src="https://github.com/user-attachments/assets/7ac7f6c1-f379-4b5d-ab6c-9e4cd9805258" />
 
+## Install
+[TLDR Extension in Chrome](https://chromewebstore.google.com/detail/ajdpjbfjlkbondaehploapamogjblodm?utm_source=item-share-cb)
+
 
 ## Features
 

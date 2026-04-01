@@ -94,7 +94,7 @@ summarizeBtn.addEventListener('click', async () => {
 
     const response = await extractContent(tab.id);
 
-    chrome.runtime.sendMessage({
+    await chrome.runtime.sendMessage({
       type: 'OPEN_TLDR',
       title: response.title,
       url: response.url,

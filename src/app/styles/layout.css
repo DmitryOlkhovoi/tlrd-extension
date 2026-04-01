@@ -1,49 +1,47 @@
-@layer components {
-  .app {
-    @apply min-h-screen bg-surface-50 text-surface-900 font-sans;
-  }
+@utility app {
+  @apply min-h-screen bg-surface-50 text-surface-900 font-sans;
+}
 
-  .app__header {
-    @apply bg-white border-b border-surface-200 px-6 py-4 flex items-center justify-between sticky top-0 z-10;
-  }
+@utility app__header {
+  @apply bg-white border-b border-surface-200 px-6 py-4 flex items-center justify-between sticky top-0 z-10;
+}
 
-  .app__logo {
-    @apply text-xl font-bold text-primary-700 tracking-tight flex items-center gap-2;
-  }
+@utility app__logo {
+  @apply text-xl font-bold text-primary-700 tracking-tight flex items-center gap-2;
+}
 
-  .app__logo-icon {
-    @apply w-7 h-7 text-primary-500;
-  }
+@utility app__logo-icon {
+  @apply w-7 h-7 text-primary-500;
+}
 
-  .app__settings-btn {
-    @apply p-2 rounded-lg text-surface-500 hover:text-surface-700 hover:bg-surface-100 transition-colors;
-  }
+@utility app__settings-btn {
+  @apply p-2 rounded-lg text-surface-500 hover:text-surface-700 hover:bg-surface-100 transition-colors;
+}
 
-  .app__body {
-    @apply max-w-3xl mx-auto px-4 py-8 flex flex-col gap-6;
-  }
+@utility app__body {
+  @apply max-w-3xl mx-auto px-4 py-8 flex flex-col gap-6;
+}
 
-  .app__actions {
-    @apply flex gap-3 items-center;
-  }
+@utility app__actions {
+  @apply flex gap-3 items-center;
+}
 
-  .btn {
-    @apply px-5 py-2.5 rounded-xl font-medium text-sm transition-all duration-200 cursor-pointer inline-flex items-center gap-2;
-  }
+@utility btn {
+  @apply px-5 py-2.5 rounded-xl font-medium text-sm transition-all duration-200 cursor-pointer inline-flex items-center gap-2;
+}
 
-  .btn--primary {
-    @apply bg-primary-600 text-white hover:bg-primary-700 active:bg-primary-800 shadow-sm shadow-primary-200;
-  }
+@utility btn--primary {
+  @apply bg-primary-600 text-white hover:bg-primary-700 active:bg-primary-800 shadow-xs shadow-primary-200;
 
-  .btn--primary:disabled {
+  &:disabled {
     @apply bg-surface-300 text-surface-500 cursor-not-allowed shadow-none;
   }
+}
 
-  .btn--secondary {
-    @apply bg-white text-surface-700 border border-surface-300 hover:bg-surface-50 hover:border-surface-400;
-  }
+@utility btn--secondary {
+  @apply bg-white text-surface-700 border border-surface-300 hover:bg-surface-50 hover:border-surface-400;
+}
 
-  .btn--icon {
-    @apply p-2 rounded-lg;
-  }
+@utility btn--icon {
+  @apply p-2 rounded-lg;
 }

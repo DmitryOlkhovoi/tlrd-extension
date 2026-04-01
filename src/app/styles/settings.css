@@ -1,55 +1,53 @@
-@layer components {
-  .settings {
-    @apply bg-white rounded-2xl border border-surface-200 p-6 shadow-sm flex flex-col gap-4;
-  }
+@utility settings {
+  @apply bg-white rounded-2xl border border-surface-200 p-6 shadow-xs flex flex-col gap-4;
+}
 
-  .settings__title {
-    @apply text-base font-semibold text-surface-800 mb-4 flex items-center gap-2;
-  }
+@utility settings__title {
+  @apply text-base font-semibold text-surface-800 mb-4 flex items-center gap-2;
+}
 
-  .settings__title-icon {
-    @apply w-5 h-5 text-surface-400;
-  }
+@utility settings__title-icon {
+  @apply w-5 h-5 text-surface-400;
+}
 
-  .settings__field {
-    @apply flex flex-col gap-2;
-  }
+@utility settings__field {
+  @apply flex flex-col gap-2;
+}
 
-  .settings__label {
-    @apply text-sm font-medium text-surface-600;
-  }
+@utility settings__label {
+  @apply text-sm font-medium text-surface-600;
+}
 
-  .settings__input-wrap {
-    @apply flex gap-2;
-  }
+@utility settings__input-wrap {
+  @apply flex gap-2;
+}
 
-  .settings__input {
-    @apply flex-1 px-4 py-2.5 rounded-xl border border-surface-300 bg-surface-50 text-sm text-surface-800 placeholder-surface-400
-           focus:outline-none focus:ring-2 focus:ring-primary-200 focus:border-primary-400 transition-all;
-  }
+@utility settings__input {
+  @apply flex-1 px-4 py-2.5 rounded-xl border border-surface-300 bg-surface-50 text-sm text-surface-800 placeholder-surface-400
+           focus:outline-hidden focus:ring-2 focus:ring-primary-200 focus:border-primary-400 transition-all;
+}
 
-  .settings__save-btn {
-    @apply btn btn--primary;
-  }
+@utility settings__save-btn {
+  @apply btn btn--primary;
+}
 
-  .settings__status {
-    @apply text-xs mt-2 font-medium;
-  }
+@utility settings__status {
+  @apply text-xs mt-2 font-medium;
+}
 
-  .settings__status--saved {
-    @apply text-green-600;
-  }
+@utility settings__status--saved {
+  @apply text-green-600;
+}
 
-  .settings__status--error {
-    @apply text-red-500;
-  }
+@utility settings__status--error {
+  @apply text-red-500;
+}
 
-  .settings__link {
-    @apply text-xs text-primary-600 hover:text-primary-700 underline;
-  }
+@utility settings__link {
+  @apply text-xs text-primary-600 hover:text-primary-700 underline;
+}
 
-  .settings__select {
-    @apply w-full px-4 py-2.5 rounded-xl border border-surface-300 bg-surface-50 text-sm text-surface-800
-           focus:outline-none focus:ring-2 focus:ring-primary-200 focus:border-primary-400 transition-all cursor-pointer;
-  }
+@utility settings__select {
+  @apply w-full px-4 py-2.5 rounded-xl border border-surface-300 bg-surface-50 text-sm text-surface-800
+           focus:outline-hidden focus:ring-2 focus:ring-primary-200 focus:border-primary-400 transition-all cursor-pointer;
 }

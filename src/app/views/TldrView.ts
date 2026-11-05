@@ -1,7 +1,7 @@
 import { View } from 'ostovjs';
 import template from '../templates/tldr.hbs';
 import type PageModel from '../models/PageModel';
-import { marked } from 'marked';
+import { renderMarkdown } from '../services/markdown';
 
 class TldrView extends View {
   declare model: PageModel;
@@ -23,7 +23,7 @@ class TldrView extends View {
     (this.el as HTMLElement).innerHTML = template({
       pageTitle: this.model.get('title'),
       pageUrl: this.model.get('url'),
-      tldr: tldr ? marked.parse(tldr) : '',
+      tldr: tldr ? renderMarkdown(tldr) : '',
       loading: this.model.get('loading'),
       error: this.model.get('error'),
     });
@@ -33,7 +33,7 @@ class TldrView extends View {
   updateContent(text: string) {
     const contentEl = (this.el as HTMLElement).querySelector('.tldr__content');
     if (contentEl) {
-      contentEl.innerHTML = marked.parse(text || '') as string;
+      contentEl.innerHTML = renderMarkdown(text);
     }
   }
 }

@@ -122,28 +122,34 @@ class OpenAIService {
       return false;
     };
 
-    while (!receivedDone) {
-      const { done, value } = await reader.read();
-      if (done) break;
+    try {
+      while (!receivedDone) {
+        const { done, value } = await reader.read();
+        if (done) break;
 
-      buffer += decoder.decode(value, { stream: true });
-      const lines = buffer.split('\n');
-      buffer = lines.pop() || '';
+        buffer += decoder.decode(value, { stream: true });
+        const lines = buffer.split('\n');
+        buffer = lines.pop() || '';
 
-      for (const line of lines) {
-        if (processLine(line)) {
-          receivedDone = true;
-          break;
+        for (const line of lines) {
+          if (processLine(line)) {
+            receivedDone = true;
+            break;
+          }
         }
       }
-    }
 
-    if (!receivedDone) {
-      buffer += decoder.decode();
-      if (buffer) processLine(buffer);
-    }
+      if (receivedDone) {
+        await reader.cancel();
+      } else {
+        buffer += decoder.decode();
+        if (buffer) processLine(buffer);
+      }
 
-    return fullText;
+      return fullText;
+    } finally {
+      reader.releaseLock();
+    }
   }
 }
 

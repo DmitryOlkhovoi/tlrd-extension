@@ -171,7 +171,10 @@ class AppView extends View {
       (assistantMsg as any).set('content', answer);
     } catch (err) {
       const message = err instanceof Error ? err.message : 'Unknown error';
-      (assistantMsg as any).set('content', `Error: ${message}`);
+      const errorText = `Error: ${message}`;
+      (assistantMsg as any).set('content', errorText);
+      const lastView = this.chatView.getLastMessageView();
+      if (lastView) lastView.updateContent(errorText);
     }
 
     this.chatView.setDisabled(false);

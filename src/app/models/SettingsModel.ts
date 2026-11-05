@@ -1,4 +1,5 @@
 import { Model } from 'ostovjs';
+import { isSummaryLanguage, isSupportedLocale } from '../../shared/i18n/locales';
 import type { SupportedLocale, SummaryLanguage } from '../../shared/i18n/locales';
 
 interface SettingsAttributes {
@@ -35,10 +36,16 @@ class SettingsModel extends Model<SettingsAttributes> {
   async load(): Promise<void> {
     try {
       const data = await chrome.storage.local.get(['apiKey', 'model', 'summaryLanguage', 'uiLanguage']);
-      if (data.apiKey) this.set('apiKey', data.apiKey as string, { silent: true });
-      if (data.model) this.set('model', data.model as string, { silent: true });
-      if (data.summaryLanguage) this.set('summaryLanguage', data.summaryLanguage as SummaryLanguage, { silent: true });
-      if (data.uiLanguage) this.set('uiLanguage', data.uiLanguage as SupportedLocale, { silent: true });
+      if (typeof data.apiKey === 'string') this.set('apiKey', data.apiKey, { silent: true });
+      if (AVAILABLE_MODELS.some((model) => model.id === data.model)) {
+        this.set('model', data.model as string, { silent: true });
+      }
+      if (isSummaryLanguage(data.summaryLanguage)) {
+        this.set('summaryLanguage', data.summaryLanguage, { silent: true });
+      }
+      if (isSupportedLocale(data.uiLanguage)) {
+        this.set('uiLanguage', data.uiLanguage, { silent: true });
+      }
     } catch {
     } finally {
       this.trigger('loaded');

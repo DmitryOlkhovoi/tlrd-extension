@@ -2,10 +2,12 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
   if (message.type === 'OPEN_TLDR') {
     (async () => {
       try {
-        await chrome.storage.session.set({ pendingPageContent: message.content });
+        const contentKey = `pendingPageContent:${crypto.randomUUID()}`;
+        await chrome.storage.session.set({ [contentKey]: message.content });
         const params = new URLSearchParams({
           title: message.title || '',
           url: message.url || '',
+          contentKey,
         });
 
         await chrome.tabs.create({

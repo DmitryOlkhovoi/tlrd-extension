@@ -13,6 +13,8 @@ let fallbackTranslations: Record<string, string> | null = null;
 export async function setLocale(locale: SupportedLocale): Promise<void> {
   overrideLocale = locale;
   fallbackTranslations = null;
+  document.documentElement.lang = locale;
+  document.documentElement.dir = locale === 'ar' ? 'rtl' : 'ltr';
 
   try {
     const translations = await import(`./translations/${locale}.ts`);

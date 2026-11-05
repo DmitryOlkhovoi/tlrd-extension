@@ -58,10 +58,10 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        app: resolve(__dirname, 'src/app/app.html'),
-        popup: resolve(__dirname, 'src/popup/popup.html'),
-        background: resolve(__dirname, 'src/background/background.ts'),
-        content: resolve(__dirname, 'src/content/content.ts'),
+        app: resolve(import.meta.dirname, 'src/app/app.html'),
+        popup: resolve(import.meta.dirname, 'src/popup/popup.html'),
+        background: resolve(import.meta.dirname, 'src/background/background.ts'),
+        content: resolve(import.meta.dirname, 'src/content/content.ts'),
       },
       output: {
         entryFileNames: '[name].js',
@@ -72,7 +72,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': resolve(__dirname, 'src'),
+      '@': resolve(import.meta.dirname, 'src'),
     },
   },
   plugins: [handlebarsPrecompile(), copyExtensionFiles()],

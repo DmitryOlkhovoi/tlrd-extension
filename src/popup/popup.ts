@@ -15,6 +15,8 @@ function translateUI() {
   document.querySelectorAll<HTMLElement>('[data-i18n]').forEach((el) => {
     el.textContent = t(el.dataset.i18n!);
   });
+  toggleSettingsBtn.setAttribute('aria-label', t('popup.settings'));
+  toggleSettingsBtn.setAttribute('title', t('popup.settings'));
 }
 
 function showSection(hasKey: boolean) {

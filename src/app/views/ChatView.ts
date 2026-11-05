@@ -33,9 +33,11 @@ class ChatView extends View {
     });
 
     const messagesEl = el.querySelector('[data-region=messages]')!;
+    this._lastMessageView = null;
     this.collection.models.forEach((msg: MessageModel) => {
       const view = new MessageView({ model: msg });
       messagesEl.appendChild(view.render().el as HTMLElement);
+      this._lastMessageView = view;
     });
 
     return this;

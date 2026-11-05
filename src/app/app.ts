@@ -35,6 +35,9 @@ chrome.storage.session.get('pendingPageContent').then((data) => {
     chrome.storage.session.remove('pendingPageContent');
     tryAutoSummarize();
   }
+}).catch((err) => {
+  const message = err instanceof Error ? err.message : 'Unknown error';
+  pageModel.set('error', message);
 });
 
 settingsModel.on('loaded', async () => {

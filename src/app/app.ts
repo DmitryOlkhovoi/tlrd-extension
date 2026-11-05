@@ -37,8 +37,8 @@ chrome.storage.session.get('pendingPageContent').then((data) => {
   }
 });
 
-settingsModel.on('loaded', () => {
-  setLocale(settingsModel.get('uiLanguage') as SupportedLocale);
+settingsModel.on('loaded', async () => {
+  await setLocale(settingsModel.get('uiLanguage') as SupportedLocale);
 
   appView = new AppView({
     settingsModel,

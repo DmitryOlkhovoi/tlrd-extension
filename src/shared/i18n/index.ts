@@ -10,25 +10,26 @@ let overrideLocale: SupportedLocale | null = null;
 // Fallback translations for when chrome.i18n is not available or locale override is active
 let fallbackTranslations: Record<string, string> | null = null;
 
-export function setLocale(locale: SupportedLocale): void {
+export async function setLocale(locale: SupportedLocale): Promise<void> {
   overrideLocale = locale;
-  // Dynamically load fallback translations for the override locale
-  loadFallback(locale);
+  fallbackTranslations = null;
+
+  try {
+    const translations = await import(`./translations/${locale}.ts`);
+    if (overrideLocale === locale) {
+      fallbackTranslations = translations.default;
+    }
+  } catch {
+    if (overrideLocale === locale) {
+      fallbackTranslations = null;
+    }
+  }
 }
 
 export function getLocale(): SupportedLocale {
   if (overrideLocale) return overrideLocale;
   const uiLocale = chrome.i18n.getUILanguage().split('-')[0];
   return (uiLocale || 'en') as SupportedLocale;
-}
-
-async function loadFallback(locale: SupportedLocale): Promise<void> {
-  try {
-    const translations = await import(`./translations/${locale}.ts`);
-    fallbackTranslations = translations.default;
-  } catch {
-    fallbackTranslations = null;
-  }
 }
 
 export function t(key: string): string {

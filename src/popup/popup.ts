@@ -25,7 +25,7 @@ function showSection(hasKey: boolean) {
 async function init() {
   const data = await chrome.storage.local.get(['apiKey', 'uiLanguage']);
   const uiLang = (data.uiLanguage || 'en') as SupportedLocale;
-  setLocale(uiLang);
+  await setLocale(uiLang);
   translateUI();
   showSection(Boolean(data.apiKey));
 }

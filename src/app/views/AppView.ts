@@ -91,8 +91,8 @@ class AppView extends View {
     if (btn) btn.disabled = !this.settingsModel.hasApiKey();
   }
 
-  onLocaleChanged(locale: string) {
-    setLocale(locale as SupportedLocale);
+  async onLocaleChanged(locale: string) {
+    await setLocale(locale as SupportedLocale);
     this.render();
   }
 

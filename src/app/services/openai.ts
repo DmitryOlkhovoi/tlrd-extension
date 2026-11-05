@@ -94,12 +94,35 @@ class OpenAIService {
       throw new Error(err.error?.message || `OpenAI API error: ${response.status}`);
     }
 
-    const reader = response.body!.getReader();
+    if (!response.body) throw new Error('OpenAI API returned an empty response body');
+
+    const reader = response.body.getReader();
     const decoder = new TextDecoder();
     let fullText = '';
     let buffer = '';
+    let receivedDone = false;
 
-    while (true) {
+    const processLine = (line: string): boolean => {
+      const trimmed = line.trim();
+      if (!trimmed || !trimmed.startsWith('data:')) return false;
+
+      const data = trimmed.slice(5).trimStart();
+      if (data === '[DONE]') return true;
+
+      try {
+        const parsed = JSON.parse(data);
+        const delta = parsed.choices?.[0]?.delta?.content;
+        if (delta) {
+          fullText += delta;
+          onChunk(fullText);
+        }
+      } catch {
+        // skip malformed chunks
+      }
+      return false;
+    };
+
+    while (!receivedDone) {
       const { done, value } = await reader.read();
       if (done) break;
 
@@ -108,23 +131,16 @@ class OpenAIService {
       buffer = lines.pop() || '';
 
       for (const line of lines) {
-        const trimmed = line.trim();
-        if (!trimmed || !trimmed.startsWith('data: ')) continue;
-
-        const data = trimmed.slice(6);
-        if (data === '[DONE]') break;
-
-        try {
-          const parsed = JSON.parse(data);
-          const delta = parsed.choices?.[0]?.delta?.content;
-          if (delta) {
-            fullText += delta;
-            onChunk(fullText);
-          }
-        } catch {
-          // skip malformed chunks
+        if (processLine(line)) {
+          receivedDone = true;
+          break;
         }
       }
+    }
+
+    if (!receivedDone) {
+      buffer += decoder.decode();
+      if (buffer) processLine(buffer);
     }
 
     return fullText;

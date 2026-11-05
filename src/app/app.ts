@@ -31,7 +31,7 @@ function tryAutoSummarize() {
 
 chrome.storage.session.get('pendingPageContent').then((data) => {
   if (data.pendingPageContent) {
-    pageModel.set('content', data.pendingPageContent);
+    pageModel.set('content', data.pendingPageContent as string);
     chrome.storage.session.remove('pendingPageContent');
     tryAutoSummarize();
   }

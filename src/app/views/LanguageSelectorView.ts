@@ -1,6 +1,7 @@
 import { View } from 'ostovjs';
 import template from '../templates/language-selector.hbs';
 import { SUMMARY_LANGUAGES, UI_LANGUAGES } from '../../shared/i18n/locales';
+import type { SupportedLocale, SummaryLanguage } from '../../shared/i18n/locales';
 import type SettingsModel from '../models/SettingsModel';
 
 class LanguageSelectorView extends View {
@@ -36,13 +37,13 @@ class LanguageSelectorView extends View {
   }
 
   onChangeSummaryLang(e: Event) {
-    const value = (e.target as HTMLSelectElement).value;
+    const value = (e.target as HTMLSelectElement).value as SummaryLanguage;
     this.model.set('summaryLanguage', value);
     this.model.persist();
   }
 
   onChangeUiLang(e: Event) {
-    const value = (e.target as HTMLSelectElement).value;
+    const value = (e.target as HTMLSelectElement).value as SupportedLocale;
     this.model.set('uiLanguage', value);
     this.model.persist();
     this.trigger('locale-changed', value);

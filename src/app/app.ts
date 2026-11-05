@@ -16,6 +16,7 @@ const messagesCollection = new MessagesCollection();
 const params = new URLSearchParams(window.location.search);
 const pageTitle = params.get('title') || '';
 const pageUrl = params.get('url') || '';
+const pendingContentKey = params.get('contentKey') || 'pendingPageContent';
 
 pageModel.set({ title: pageTitle, url: pageUrl }, { silent: true });
 
@@ -29,10 +30,10 @@ function tryAutoSummarize() {
   appView.onSummarize();
 }
 
-chrome.storage.session.get('pendingPageContent').then((data) => {
-  if (data.pendingPageContent) {
-    pageModel.set('content', data.pendingPageContent as string);
-    chrome.storage.session.remove('pendingPageContent');
+chrome.storage.session.get(pendingContentKey).then((data) => {
+  if (data[pendingContentKey]) {
+    pageModel.set('content', data[pendingContentKey] as string);
+    chrome.storage.session.remove(pendingContentKey);
     tryAutoSummarize();
   }
 }).catch((err) => {

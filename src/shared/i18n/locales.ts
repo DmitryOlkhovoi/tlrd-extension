@@ -22,6 +22,14 @@ export const SUMMARY_LANGUAGES: LanguageOption[] = [
 
 export const UI_LANGUAGES: LanguageOption[] = SUMMARY_LANGUAGES.filter((l) => l.code !== 'original');
 
+export function isSupportedLocale(value: unknown): value is SupportedLocale {
+  return typeof value === 'string' && UI_LANGUAGES.some((language) => language.code === value);
+}
+
+export function isSummaryLanguage(value: unknown): value is SummaryLanguage {
+  return typeof value === 'string' && SUMMARY_LANGUAGES.some((language) => language.code === value);
+}
+
 export const LANGUAGE_NAMES: Record<string, string> = {
   en: 'English',
   zh: 'Chinese',

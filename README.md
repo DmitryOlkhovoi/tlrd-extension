@@ -45,8 +45,8 @@ src/
 ## Setup
 
 ```bash
-# Install dependencies
-npm install
+# Install locked dependencies
+npm ci
 
 # Build
 npm run build
@@ -71,7 +71,7 @@ npm run typecheck
 
 - **Framework** - [OstovJS](https://ostovjs.org/) (Models, Views, Collections, Events)
 - **Templates** - Handlebars (precompiled, CSP-safe)
-- **Styling** - Tailwind CSS 3 + BEM + `@apply`
+- **Styling** - Tailwind CSS 4 + BEM + `@apply`
 - **Language** - TypeScript
 - **Bundler** - Vite
 - **API** - OpenAI Chat Completions (streaming)

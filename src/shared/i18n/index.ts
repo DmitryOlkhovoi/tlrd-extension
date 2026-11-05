@@ -37,7 +37,7 @@ export function t(key: string): string {
 
   // If user has overridden the locale, use fallback translations
   if (overrideLocale && fallbackTranslations) {
-    return fallbackTranslations[key] ?? chrome.i18n.getMessage(msgName) ?? key;
+    return fallbackTranslations[key] ?? (chrome.i18n.getMessage(msgName) || key);
   }
 
   // Default: use Chrome's i18n API

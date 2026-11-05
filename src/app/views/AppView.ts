@@ -27,6 +27,7 @@ class AppView extends View {
   private chatView!: ChatView;
   private langSelectorView!: LanguageSelectorView;
   private _settingsVisible = false;
+  private _summarizing = false;
 
   constructor(options: AppViewOptions) {
     super({
@@ -111,13 +112,14 @@ class AppView extends View {
       return;
     }
 
-    if (this.pageModel.get('loading')) return;
+    if (this._summarizing || this.pageModel.get('loading')) return;
 
     if (!this.pageModel.hasContent()) {
       this.pageModel.set('error', 'No page content available. Open this from the extension popup.');
       return;
     }
 
+    this._summarizing = true;
     this.pageModel.set({ loading: true, error: '', tldr: '' });
 
     try {
@@ -139,6 +141,8 @@ class AppView extends View {
     } catch (err) {
       const message = err instanceof Error ? err.message : 'Unknown error';
       this.pageModel.set({ error: message, loading: false });
+    } finally {
+      this._summarizing = false;
     }
   }
 

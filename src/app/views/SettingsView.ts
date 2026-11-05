@@ -8,6 +8,7 @@ class SettingsView extends View {
   declare model: SettingsModel;
   private _status = '';
   private _statusType = '';
+  private _statusTimeout: ReturnType<typeof setTimeout> | null = null;
 
   constructor(options: { model: SettingsModel }) {
     super({
@@ -46,7 +47,15 @@ class SettingsView extends View {
     if (e.key === 'Enter') this.onSave();
   }
 
+  clearStatusTimeout() {
+    if (this._statusTimeout !== null) {
+      clearTimeout(this._statusTimeout);
+      this._statusTimeout = null;
+    }
+  }
+
   onSave() {
+    this.clearStatusTimeout();
     const input = (this.el as HTMLElement).querySelector<HTMLInputElement>('#api-key');
     const key = input?.value.trim();
 
@@ -62,24 +71,28 @@ class SettingsView extends View {
   }
 
   onChangeModel(e: Event) {
+    this.clearStatusTimeout();
     const value = (e.target as HTMLSelectElement).value;
     this.model.set('model', value);
     this.model.persist();
   }
 
   onSaveError(message: string) {
+    this.clearStatusTimeout();
     this._status = message;
     this._statusType = 'error';
     this.render();
   }
 
   onSaved() {
+    this.clearStatusTimeout();
     this._status = t('app.settings.saved');
     this._statusType = 'saved';
     this.render();
 
-    setTimeout(() => {
+    this._statusTimeout = setTimeout(() => {
       this._status = '';
+      this._statusTimeout = null;
       this.render();
     }, 2000);
   }

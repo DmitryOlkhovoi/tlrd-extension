@@ -23,11 +23,17 @@ function showSection(hasKey: boolean) {
 }
 
 async function init() {
-  const data = await chrome.storage.local.get(['apiKey', 'uiLanguage']);
-  const uiLang = (data.uiLanguage || 'en') as SupportedLocale;
-  await setLocale(uiLang);
-  translateUI();
-  showSection(Boolean(data.apiKey));
+  try {
+    const data = await chrome.storage.local.get(['apiKey', 'uiLanguage']);
+    const uiLang = (data.uiLanguage || 'en') as SupportedLocale;
+    await setLocale(uiLang);
+    translateUI();
+    showSection(Boolean(data.apiKey));
+  } catch (err) {
+    keyStatus.textContent = err instanceof Error ? err.message : 'Unknown error';
+    keyStatus.className = 'popup__status popup__status--error';
+    showSection(false);
+  }
 }
 
 saveKeyBtn.addEventListener('click', async () => {
@@ -38,10 +44,15 @@ saveKeyBtn.addEventListener('click', async () => {
     return;
   }
 
-  await chrome.storage.local.set({ apiKey: key });
-  keyStatus.textContent = t('popup.apiKey.saved');
-  keyStatus.className = 'popup__status popup__status--saved';
-  setTimeout(() => showSection(true), 500);
+  try {
+    await chrome.storage.local.set({ apiKey: key });
+    keyStatus.textContent = t('popup.apiKey.saved');
+    keyStatus.className = 'popup__status popup__status--saved';
+    setTimeout(() => showSection(true), 500);
+  } catch (err) {
+    keyStatus.textContent = err instanceof Error ? err.message : 'Unknown error';
+    keyStatus.className = 'popup__status popup__status--error';
+  }
 });
 
 apiKeyInput.addEventListener('keydown', (e) => {

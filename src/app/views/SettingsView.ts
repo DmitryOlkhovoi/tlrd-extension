@@ -24,6 +24,7 @@ class SettingsView extends View {
 
   initialize() {
     this.listenTo(this.model, 'saved', this.onSaved);
+    this.listenTo(this.model, 'save-error', this.onSaveError);
     this.listenTo(this.model, 'loaded', this.render);
   }
 
@@ -64,6 +65,12 @@ class SettingsView extends View {
     const value = (e.target as HTMLSelectElement).value;
     this.model.set('model', value);
     this.model.persist();
+  }
+
+  onSaveError(message: string) {
+    this._status = message;
+    this._statusType = 'error';
+    this.render();
   }
 
   onSaved() {

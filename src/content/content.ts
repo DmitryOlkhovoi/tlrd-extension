@@ -27,7 +27,7 @@ function extractPageContent(): string {
   const clone = contentEl.cloneNode(true) as HTMLElement;
 
   const removable = clone.querySelectorAll(
-    'script, style, noscript, svg, nav, header, footer, aside, .sidebar, .nav, .menu, .ad, .advertisement, [role="navigation"], [role="banner"], [role="complementary"], [hidden]'
+    'script, style, noscript, svg, nav, header, footer, aside, form, button, input, select, textarea, .sidebar, .nav, .menu, .ad, .advertisement, [role="navigation"], [role="banner"], [role="complementary"], [hidden], [aria-hidden="true"]'
   );
   removable.forEach((el) => el.remove());
 

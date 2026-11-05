@@ -32,25 +32,32 @@ class SettingsModel extends Model<SettingsAttributes> {
     this.load();
   }
 
-  load(): void {
-    chrome.storage.local.get(['apiKey', 'model', 'summaryLanguage', 'uiLanguage']).then((data) => {
+  async load(): Promise<void> {
+    try {
+      const data = await chrome.storage.local.get(['apiKey', 'model', 'summaryLanguage', 'uiLanguage']);
       if (data.apiKey) this.set('apiKey', data.apiKey as string, { silent: true });
       if (data.model) this.set('model', data.model as string, { silent: true });
       if (data.summaryLanguage) this.set('summaryLanguage', data.summaryLanguage as SummaryLanguage, { silent: true });
       if (data.uiLanguage) this.set('uiLanguage', data.uiLanguage as SupportedLocale, { silent: true });
+    } catch {
+    } finally {
       this.trigger('loaded');
-    });
+    }
   }
 
-  persist(): void {
-    chrome.storage.local.set({
-      apiKey: this.get('apiKey'),
-      model: this.get('model'),
-      summaryLanguage: this.get('summaryLanguage'),
-      uiLanguage: this.get('uiLanguage'),
-    }).then(() => {
+  async persist(): Promise<void> {
+    try {
+      await chrome.storage.local.set({
+        apiKey: this.get('apiKey'),
+        model: this.get('model'),
+        summaryLanguage: this.get('summaryLanguage'),
+        uiLanguage: this.get('uiLanguage'),
+      });
       this.trigger('saved');
-    });
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Unknown error';
+      this.trigger('save-error', message);
+    }
   }
 
   hasApiKey(): boolean {

@@ -94,12 +94,16 @@ summarizeBtn.addEventListener('click', async () => {
 
     const response = await extractContent(tab.id);
 
-    await chrome.runtime.sendMessage({
+    const result = await chrome.runtime.sendMessage({
       type: 'OPEN_TLDR',
       title: response.title,
       url: response.url,
       content: response.content,
     });
+
+    if (!result?.ok) {
+      throw new Error(result?.error || t('error.noContent'));
+    }
 
     window.close();
   } catch (err) {

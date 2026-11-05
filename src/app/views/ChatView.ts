@@ -66,6 +66,8 @@ class ChatView extends View {
   }
 
   onKeydown(e: KeyboardEvent) {
+    if (e.isComposing) return;
+
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
       this.onSend();
